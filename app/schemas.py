@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import date
 
-# ---------- Doctor ----------
+# Doctor 
 class DoctorCreate(BaseModel):
     name: str
     specialization: str
@@ -15,7 +15,7 @@ class DoctorResponse(DoctorCreate):
         orm_mode = True
 
 
-# ---------- Patient ----------
+# Patient 
 class PatientCreate(BaseModel):
     name: str
     age: int
@@ -29,7 +29,7 @@ class PatientResponse(PatientCreate):
         orm_mode = True
 
 
-# ---------- Appointment ----------
+# Appointment 
 class AppointmentCreate(BaseModel):
     appointment_date: date
     doctor_id: int
